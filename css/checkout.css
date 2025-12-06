@@ -1,0 +1,347 @@
+/* ===================================
+   أنماط صفحة الطلب (Checkout)
+   =================================== */
+
+.checkout-page {
+    min-height: 80vh;
+    padding: var(--spacing-xl) 0;
+    background: var(--bg-secondary);
+}
+
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: var(--spacing-lg);
+}
+
+/* نموذج معلومات الزبون */
+.checkout-form {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.checkout-form h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.checkout-form h2 i {
+    color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1rem;
+}
+
+.form-label .required {
+    color: var(--accent-color);
+    margin-right: var(--spacing-xs);
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid var(--gray-lighter);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: var(--transition-fast);
+    background: var(--white);
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: var(--accent-color);
+}
+
+.form-error {
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    margin-top: var(--spacing-xs);
+    display: none;
+}
+
+.form-input.error~.form-error,
+.form-textarea.error~.form-error {
+    display: block;
+}
+
+.form-textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-help {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-top: var(--spacing-xs);
+}
+
+/* ملخص الطلب */
+.order-summary {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-md);
+    position: sticky;
+    top: 100px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.order-summary h2 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.order-summary h2 i {
+    color: var(--primary-color);
+}
+
+.order-number {
+    background: var(--primary-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.order-number-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.order-number-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    font-family: 'Courier New', monospace;
+}
+
+/* قائمة المنتجات في الملخص */
+.summary-items {
+    margin-bottom: var(--spacing-lg);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.summary-item {
+    display: flex;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--gray-lighter);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-item-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+}
+
+.summary-item-details {
+    flex: 1;
+}
+
+.summary-item-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.summary-item-quantity {
+    font-size: 0.85rem;
+    color: var(--gray);
+}
+
+.summary-item-price {
+    font-weight: 600;
+    color: var(--primary-color);
+    white-space: nowrap;
+}
+
+/* إجمالي الطلب */
+.order-totals {
+    border-top: 2px solid var(--primary-color);
+    padding-top: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+}
+
+.total-row.grand-total {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-top: var(--spacing-sm);
+}
+
+/* أزرار الإرسال */
+.submit-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    transition: var(--transition-fast);
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: var(--white);
+}
+
+.btn-whatsapp:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-email {
+    background: var(--secondary-color);
+    color: var(--white);
+}
+
+.btn-email:hover {
+    background: var(--secondary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-submit i {
+    font-size: 1.2rem;
+}
+
+.btn-submit:disabled {
+    background: var(--gray-light);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* معلومات إضافية */
+.checkout-info {
+    background: var(--primary-light);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius-md);
+    margin-top: var(--spacing-lg);
+}
+
+.checkout-info h3 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.checkout-info ul {
+    list-style: none;
+}
+
+.checkout-info li {
+    padding: var(--spacing-xs) 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.checkout-info li i {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+}
+
+/* التجاوب */
+@media (max-width: 992px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .order-summary {
+        position: static;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .checkout-form,
+    .order-summary {
+        padding: var(--spacing-lg);
+    }
+
+    .submit-buttons {
+        position: sticky;
+        bottom: 0;
+        background: var(--white);
+        padding: var(--spacing-md);
+        margin: 0 calc(-1 * var(--spacing-lg));
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* حالة التحميل */
+.btn-submit.loading {
+    position: relative;
+    color: transparent;
+}
+
+.btn-submit.loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--white);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}

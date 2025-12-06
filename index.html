@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="متجر المواد الغذائية - اطلب مشترياتك من منزلك بكل سهولة">
+  <title>متجر المواد الغذائية - التسوق من المنزل</title>
+  
+  <!-- الخطوط والأيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- ملفات CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- شريط التنقل -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <i class="fas fa-shopping-basket"></i>
+        <span>متجر المواد الغذائية</span>
+      </a>
+      
+      <div class="navbar-search">
+        <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+        <i class="fas fa-search"></i>
+      </div>
+      
+      <a href="cart.html" class="navbar-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span>السلة</span>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- قسم الفئات -->
+  <section class="categories-section">
+    <div class="container">
+      <h2 class="section-title">تصفح حسب الفئة</h2>
+      <div class="categories-grid" id="categoriesGrid">
+        <!-- سيتم ملؤها بواسطة JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم المنتجات -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-header">
+        <h2 class="section-title">جميع المنتجات</h2>
+        <div class="products-sort">
+          <label for="sortSelect">ترتيب حسب:</label>
+          <select id="sortSelect">
+            <option value="default">الافتراضي</option>
+            <option value="name-asc">الاسم (أ - ي)</option>
+            <option value="name-desc">الاسم (ي - أ)</option>
+            <option value="price-asc">السعر (الأقل أولاً)</option>
+            <option value="price-desc">السعر (الأعلى أولاً)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="products-grid" id="productsGrid">
+        <!-- سيتم ملؤها بواسطة JavaScript -->
+      </div>
+      
+      <!-- حالة التحميل -->
+      <div class="loading" id="loadingState" style="display: none;">
+        <div class="loading-spinner"></div>
+        <p>جاري تحميل المنتجات...</p>
+      </div>
+      
+      <!-- حالة عدم وجود نتائج -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <i class="fas fa-box-open"></i>
+        <h3>لا توجد منتجات</h3>
+        <p>لم نجد أي منتجات تطابق بحثك</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- التذييل -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>عن المتجر</h3>
+          <p>متجر المواد الغذائية يوفر لك أفضل المنتجات الطازجة والعالية الجودة مع خدمة توصيل سريعة إلى باب منزلك.</p>
+        </div>
+        
+        <div class="footer-section">
+          <h3>روابط سريعة</h3>
+          <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="cart.html">سلة التسوق</a></li>
+            <li><a href="#categories">الفئات</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3>تواصل معنا</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +213 XXX XXX XXX</li>
+            <li><i class="fas fa-envelope"></i> info@grocery-store.dz</li>
+            <li><i class="fas fa-map-marker-alt"></i> الجزائر</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 متجر المواد الغذائية. جميع الحقوق محفوظة.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ملفات JavaScript -->
+  <script src="js/utils.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

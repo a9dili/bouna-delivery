@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "طماطم",
+        "category": "خضروات",
+        "price": 150,
+        "unit": "كغ",
+        "image": "images/products/tomato.jpg",
+        "description": "طماطم طازجة من المزرعة",
+        "inStock": true
+    },
+    {
+        "id": 2,
+        "name": "بطاطا",
+        "category": "خضروات",
+        "price": 80,
+        "unit": "كغ",
+        "image": "images/products/potato.jpg",
+        "description": "بطاطا محلية عالية الجودة",
+        "inStock": true
+    },
+    {
+        "id": 3,
+        "name": "بصل",
+        "category": "خضروات",
+        "price": 100,
+        "unit": "كغ",
+        "image": "images/products/onion.jpg",
+        "description": "بصل أحمر وأبيض",
+        "inStock": true
+    },
+    {
+        "id": 4,
+        "name": "تفاح",
+        "category": "فواكه",
+        "price": 300,
+        "unit": "كغ",
+        "image": "images/products/apple.jpg",
+        "description": "تفاح أحمر طازج ولذيذ",
+        "inStock": true
+    },
+    {
+        "id": 5,
+        "name": "موز",
+        "category": "فواكه",
+        "price": 250,
+        "unit": "كغ",
+        "image": "images/products/banana.jpg",
+        "description": "موز طازج مستورد",
+        "inStock": true
+    },
+    {
+        "id": 6,
+        "name": "برتقال",
+        "category": "فواكه",
+        "price": 200,
+        "unit": "كغ",
+        "image": "images/products/orange.jpg",
+        "description": "برتقال طازج غني بفيتامين C",
+        "inStock": true
+    },
+    {
+        "id": 7,
+        "name": "حليب",
+        "category": "منتجات ألبان",
+        "price": 120,
+        "unit": "لتر",
+        "image": "images/products/milk.jpg",
+        "description": "حليب كامل الدسم طازج",
+        "inStock": true
+    },
+    {
+        "id": 8,
+        "name": "جبن",
+        "category": "منتجات ألبان",
+        "price": 400,
+        "unit": "كغ",
+        "image": "images/products/cheese.jpg",
+        "description": "جبن طبيعي عالي الجودة",
+        "inStock": true
+    },
+    {
+        "id": 9,
+        "name": "لبن",
+        "category": "منتجات ألبان",
+        "price": 80,
+        "unit": "لتر",
+        "image": "images/products/yogurt.jpg",
+        "description": "لبن طبيعي بدون إضافات",
+        "inStock": true
+    },
+    {
+        "id": 10,
+        "name": "أرز",
+        "category": "حبوب",
+        "price": 180,
+        "unit": "كغ",
+        "image": "images/products/rice.jpg",
+        "description": "أرز أبيض طويل الحبة",
+        "inStock": true
+    },
+    {
+        "id": 11,
+        "name": "عدس",
+        "category": "حبوب",
+        "price": 200,
+        "unit": "كغ",
+        "image": "images/products/lentils.jpg",
+        "description": "عدس أحمر وأصفر",
+        "inStock": true
+    },
+    {
+        "id": 12,
+        "name": "حمص",
+        "category": "حبوب",
+        "price": 220,
+        "unit": "كغ",
+        "image": "images/products/chickpeas.jpg",
+        "description": "حمص جاف عالي الجودة",
+        "inStock": true
+    },
+    {
+        "id": 13,
+        "name": "زيت زيتون",
+        "category": "زيوت",
+        "price": 800,
+        "unit": "لتر",
+        "image": "images/products/olive-oil.jpg",
+        "description": "زيت زيتون بكر ممتاز",
+        "inStock": true
+    },
+    {
+        "id": 14,
+        "name": "زيت عباد الشمس",
+        "category": "زيوت",
+        "price": 350,
+        "unit": "لتر",
+        "image": "images/products/sunflower-oil.jpg",
+        "description": "زيت عباد الشمس للطبخ",
+        "inStock": true
+    },
+    {
+        "id": 15,
+        "name": "سكر",
+        "category": "بقالة",
+        "price": 150,
+        "unit": "كغ",
+        "image": "images/products/sugar.jpg",
+        "description": "سكر أبيض ناعم",
+        "inStock": true
+    },
+    {
+        "id": 16,
+        "name": "ملح",
+        "category": "بقالة",
+        "price": 50,
+        "unit": "كغ",
+        "image": "images/products/salt.jpg",
+        "description": "ملح طعام مكرر",
+        "inStock": true
+    },
+    {
+        "id": 17,
+        "name": "معكرونة",
+        "category": "بقالة",
+        "price": 120,
+        "unit": "كغ",
+        "image": "images/products/pasta.jpg",
+        "description": "معكرونة إيطالية",
+        "inStock": true
+    },
+    {
+        "id": 18,
+        "name": "طحين",
+        "category": "بقالة",
+        "price": 100,
+        "unit": "كغ",
+        "image": "images/products/flour.jpg",
+        "description": "طحين أبيض للخبز والحلويات",
+        "inStock": true
+    }
+]

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="إتمام الطلب - متجر المواد الغذائية">
+    <title>إتمام الطلب - متجر المواد الغذائية</title>
+
+    <!-- الخطوط والأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ملفات CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/checkout.css">
+</head>
+
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <i class="fas fa-shopping-basket"></i>
+                <span>متجر المواد الغذائية</span>
+            </a>
+
+            <div class="navbar-search">
+                <input type="text" placeholder="ابحث عن منتج..." disabled>
+                <i class="fas fa-search"></i>
+            </div>
+
+            <a href="cart.html" class="navbar-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>السلة</span>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- صفحة الطلب -->
+    <div class="checkout-page">
+        <div class="checkout-container container">
+            <!-- نموذج معلومات الزبون -->
+            <div class="checkout-form">
+                <h2>
+                    <i class="fas fa-user-circle"></i>
+                    معلومات التوصيل
+                </h2>
+
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="required">*</span>
+                            الاسم الكامل
+                        </label>
+                        <input type="text" id="customerName" class="form-input" placeholder="أدخل اسمك الكامل" required>
+                        <span class="form-error">الرجاء إدخال الاسم الكامل</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="required">*</span>
+                            رقم الهاتف
+                        </label>
+                        <input type="tel" id="customerPhone" class="form-input" placeholder="0XXX XX XX XX" required>
+                        <span class="form-error">الرجاء إدخال رقم هاتف صحيح</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            <span class="required">*</span>
+                            العنوان الكامل
+                        </label>
+                        <input type="text" id="customerAddress" class="form-input" placeholder="الشارع، الحي، الولاية"
+                            required>
+                        <span class="form-error">الرجاء إدخال العنوان الكامل</span>
+                        <span class="form-help">يرجى كتابة العنوان بالتفصيل لضمان التوصيل السريع</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">
+                            ملاحظات إضافية (اختياري)
+                        </label>
+                        <textarea id="customerNotes" class="form-textarea"
+                            placeholder="أي ملاحظات خاصة بالطلب..."></textarea>
+                        <span class="form-help">مثال: وقت التوصيل المفضل، تعليمات خاصة، إلخ</span>
+                    </div>
+                </form>
+
+                <div class="checkout-info">
+                    <h3>
+                        <i class="fas fa-info-circle"></i>
+                        معلومات مهمة
+                    </h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> الدفع عند التوصيل</li>
+                        <li><i class="fas fa-check"></i> التوصيل خلال 24 ساعة</li>
+                        <li><i class="fas fa-check"></i> يمكنك التواصل معنا عبر WhatsApp أو Email</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ملخص الطلب -->
+            <div class="order-summary">
+                <h2>
+                    <i class="fas fa-receipt"></i>
+                    ملخص الطلب
+                </h2>
+
+                <div class="order-number">
+                    <div class="order-number-label">رقم الطلب</div>
+                    <div class="order-number-value" id="orderNumber">---</div>
+                </div>
+
+                <div class="summary-items" id="summaryItems">
+                    <!-- سيتم ملؤها بواسطة JavaScript -->
+                </div>
+
+                <div class="order-totals">
+                    <div class="total-row">
+                        <span>المجموع الفرعي:</span>
+                        <span id="subtotal">0 دج</span>
+                    </div>
+                    <div class="total-row">
+                        <span>التوصيل:</span>
+                        <span>مجاناً</span>
+                    </div>
+                    <div class="total-row grand-total">
+                        <span>المجموع الكلي:</span>
+                        <span id="grandTotal">0 دج</span>
+                    </div>
+                </div>
+
+                <div class="submit-buttons">
+                    <button type="button" class="btn-submit btn-whatsapp" id="btnWhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                        إرسال عبر WhatsApp
+                    </button>
+
+                    <button type="button" class="btn-submit btn-email" id="btnEmail">
+                        <i class="fas fa-envelope"></i>
+                        إرسال عبر Email
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن المتجر</h3>
+                    <p>متجر المواد الغذائية يوفر لك أفضل المنتجات الطازجة والعالية الجودة مع خدمة توصيل سريعة إلى باب
+                        منزلك.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="cart.html">سلة التسوق</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +213 XXX XXX XXX</li>
+                        <li><i class="fas fa-envelope"></i> info@grocery-store.dz</li>
+                        <li><i class="fas fa-map-marker-alt"></i> الجزائر</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 متجر المواد الغذائية. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ملفات JavaScript -->
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
+</body>
+
+</html>
