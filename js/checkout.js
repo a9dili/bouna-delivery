@@ -195,7 +195,7 @@ function sendViaWhatsApp() {
     const customer = getCustomerData();
 
     // رقم WhatsApp الخاص بالمتجر (يجب تعديله)
-    const storePhone = '213XXXXXXXXX'; // ضع رقم هاتف المتجر هنا
+    const storePhone = '213664579099'; // ضع رقم هاتف المتجر هنا
 
     // تنظيف رقم الهاتف
     const cleanPhone = cleanPhoneForWhatsApp(storePhone);
