@@ -219,7 +219,7 @@ function sendViaEmail() {
     const customer = getCustomerData();
 
     // البريد الإلكتروني للمتجر (يجب تعديله)
-    const storeEmail = 'billel.boulkroun@gmail.com'; // ضع البريد الإلكتروني للمتجر هنا
+    const storeEmail = 'a9dili23@outlook.com'; // ضع البريد الإلكتروني للمتجر هنا
 
     const subject = `طلب جديد - ${orderNumber}`;
     const body = message.replace(/\*/g, '').replace(/\n/g, '%0D%0A');
@@ -280,3 +280,4 @@ function showSuccessMessage() {
 document.addEventListener('DOMContentLoaded', () => {
     initCheckoutPage();
 });
+
